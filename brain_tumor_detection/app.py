@@ -12,7 +12,7 @@ from PIL import Image
 from tensorflow.keras.models import load_model
 import os
 # Add background image
-st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
+# st.markdown('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">', unsafe_allow_html=True)
 @st.cache_data
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
@@ -162,7 +162,7 @@ def main():
                 </div>
                  <style>
                     .text-animation span {{
-                    animation: text-anim 8s steps({len(text)}) infinite;
+                    animation: text-anim 9s steps({len(text)}) infinite;
                     white-space: nowrap;
                     overflow: hidden;
                     display: inline-block;
@@ -230,6 +230,7 @@ def main():
         .st-emotion-cache-nahz7x p {
             font-size: 30px;
             text-align: center;
+            font-family: 'Georgia', sans-serif;
             word-break: break-word;
             opacity: 0;
             animation: fadeIn 2s forwards;
@@ -391,6 +392,13 @@ def main():
         </style>
         """
         st.markdown(uploader_style, unsafe_allow_html=True)
+        st.markdown("""
+                <style>
+                .st-emotion-cache-1erivf3 {
+                    background-color: rgb(38 39 48 / 22%);
+                }
+                </style>
+                 """, unsafe_allow_html=True)  
         st.markdown("""
                 <style>
                 .st-emotion-cache-5rimss p {
